@@ -4,10 +4,6 @@ import math
 from fractions import Fraction
 from math import gcd
 
-# a, b = map(int, input("Enter first fraction (in the form a/b): ").split("/"))
-# c, d = map(int, input("Enter second fraction (in the form a/b): ").split("/"))
-
-
 a1, b1 = map(int, input("Enter first fraction (in the form a/b): ").split("/"))
 a2, b2 = map(int, input("Enter second fraction (in the form a/b): ").split("/"))
 
