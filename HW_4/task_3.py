@@ -2,7 +2,7 @@
 # Если ключ не хешируем, используйте его строковое представление.
 
 
-def hashable_dicts(**kwargs):
+def hashtable_dicts(**kwargs):
     pets = dict()
     for k, v in kwargs.items():
         if isinstance(v, (list, dict, set, bytearray)):
@@ -12,8 +12,8 @@ def hashable_dicts(**kwargs):
 
 
 print(
-    hashable_dicts(
-        dog="Jack",
+    hashtable_dicts(
+        dog="Jackill",
         cat={"Leopold": 2, "Murka": 3},
         turtle=["Bill", "Jack", "Anatoliy"],
         hamster={"Edward", "Homa"},
