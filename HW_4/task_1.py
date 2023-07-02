@@ -3,7 +3,7 @@
 # Значения не удаляются, а помещаются в одноимённые переменные без s на конце.
 
 
-def function() -> None:
+def func() -> None:
     g = globals()
     change = {}
     for key, value in g.items():
@@ -22,6 +22,6 @@ names = ("Name", "FirstName", "LastName")
 sx = 3123
 
 print(datas, s, names, sx)
-function()
+func()
 print(datas, s, names, sx)
 
