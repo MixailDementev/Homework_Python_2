@@ -80,7 +80,7 @@ def make_line() -> str:
 
 
 def write_csv(file: str) -> None:
-    LINE_COUNT = 100
+    LINE_COUNT = 200
     list_csv = []
     for _ in range(LINE_COUNT):
         num_1, num_2, num_3 = make_line()
