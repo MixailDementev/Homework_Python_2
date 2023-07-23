@@ -26,7 +26,7 @@ def find_root_in_csv_deco(func: Callable) -> object:
                             "a": int(row[0]),
                             "b": int(row[1]),
                             "c": int(row[2]),
-                            "result": func(int(row[0]), int(row[1]), int(row[2])),
+                            "result": func(*map(int, row))),
                         }
                     }
                 equations.update(equation)
