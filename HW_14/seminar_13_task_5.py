@@ -3,11 +3,11 @@ import json
 from seminar_13_user import User
 from Exceptions import AccesErorr, LevelError
 
-class UserWorkshop:
+class Project:
     user_list = set()
 
     def __init__(self):
-        UserWorkshop.load_users()
+        Project.load_users()
         pass
 
 
@@ -17,12 +17,12 @@ class UserWorkshop:
             user_dict = json.load(f)
         for level, user_list in user_dict.items():
             for id, name in user_list.items():
-                UserWorkshop.user_list.add(User(name, str(id), str(level)))
+                Project.user_list.add(User(name, str(id), str(level)))
 
 
     def login(self, name: str, id: str):            
         login_user = User(name, id)
-        for user in UserWorkshop.user_list:
+        for user in Project.user_list:
             if login_user == user:               
                 return user.level
         else:
@@ -39,7 +39,7 @@ class UserWorkshop:
 
 if __name__ == '__main__':
 
-    b = UserWorkshop()
+    b = Project()
 
     # print(b.login('Nester', '1'))
     print(b.login('Nesterov', '1'))
